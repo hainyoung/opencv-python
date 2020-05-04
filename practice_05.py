@@ -1,4 +1,5 @@
 # 사전, dictionary
+
 cabinet = {3:"김혜수", 100:"김태리"} # 3, 100은 key, "김혜수", "김태리"는 value
 print(cabinet[3])
 print(cabinet[100])
