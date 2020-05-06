@@ -59,7 +59,7 @@ print(min(5, 12)) # 최솟값, 5
 print(round(3.14)) # 반올림, 3
 print(round(4.99)) # 반올림, 5
 
-from math import * # math libraray 안의 것을 이용하겠다
+from math import * # math libraray 안의 것을 이용하겠다, 불러오겠다.
 print(floor(4.99)) # 내림, 4
 print(ceil(3.14)) # 올림, 4
 print(sqrt(16)) # 제곱근, 4
@@ -117,6 +117,10 @@ Quiz) 당신은 최근에 코딩 스터디 모임을 새로 만들었습니다.
 from random import *
 # 나의 작성 답안
 print("오프라인 스터디 모임 날짜는 매월 " + str(randint(4, 28)) + "일로 선정되었습니다.")
+
+
 # 강의 답안
 date = randint(4, 28)
 print("오프라인 스터디 모임 날짜는 매월 " + str(date) + " 일로 선정되었습니다.")
+
+# 변수를 생각하자
