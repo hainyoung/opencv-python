@@ -30,7 +30,7 @@ animal = "강아지"
 name = "구름이"
 age = 4 #정수형 자료이므로 따옴표 없이 숫자를 바로 적음
 hobby =  "산책"
-is_adult = age >= 3
+is_adult = age >= 3     # age가 3 이상이면 True 아니면 False
 
 
 print("우리집 " + animal + "의 이름은 " + name + "예요")
