@@ -1,4 +1,4 @@
-# 리스트 [] : 순서를 가지는 객체의 집합
+# 리스트, list [] : 순서를 가지는 객체의 집합
 
 # 지하철 칸별로 10명, 20명, 30명이 있다
 # subway1 = 10
@@ -33,7 +33,7 @@ print(subway)
 # print(subway.pop())
 # print(subway)
 
-# 같은 이름의 사람이 몇 명 있는지 호가인
+# 같은 이름의 사람이 몇 명 있는지 확인
 subway.append("이소라")
 print(subway)
 print(subway.count("이소라"))
