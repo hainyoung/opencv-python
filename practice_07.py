@@ -12,6 +12,7 @@ print(menu, type(menu)) # class : tuple / ()
 menu = set(menu)
 print(menu, type(menu))
 
+
 """
 Quiz) 
 당신의 학교에서는 파이썬 코딩 대회를 주최합니다.
@@ -63,7 +64,7 @@ print("-- 축하합니다 --")
 # lst = range(1, 21) 써 봤지만 오류 계속 발생, 1부터 20까지 직접 타이핑
 # suffle 쓰기 위해서 list 타입으로 바꿔줘야 함을 몰랐음
 # lst의 원래 타입은 range, list 타입으로 변경해줘야 함
-# line 57 : 한 명 뽑고, 3명 뽑으면 중복 될 가능성이 있음
+# line 57 : 한 명 뽑고, 3명 뽑으면 중복 가능성이 있음
 
 
 
