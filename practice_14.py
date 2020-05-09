@@ -1,6 +1,7 @@
 # 한 줄 for 활용
 
-# 출석번호가 1, 2, 3, 4,5 였는데 앞에 100을 붙이는 걸로 규칙을 바꿈. 즉, 101, 102, 103, 104, 105로 바뀜.
+# 출석번호가 1, 2, 3, 4,5 였는데 앞에 100을 붙이는 걸로 규칙을 바꿈. 
+# 즉, 101, 102, 103, 104, 105로 바뀜.
 
 students = [1,2,3,4,5]
 print(students)
@@ -12,7 +13,7 @@ movie = ["Elizabeth", "Darcy", "Jane"]
 movie = [len(i) for i in movie]
 print(movie)
 
-# 드라마 속 캐릭터 이름을 대문자로 변환
+# 드라마(Brooklyn Nine-nine) 속 캐릭터 이름을 대문자로 변환
 bnana = ["Amy", "Gina", "Rosa"]
 bnana = {i.upper() for i in bnana}
 print(bnana)
