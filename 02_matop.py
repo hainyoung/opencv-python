@@ -49,8 +49,55 @@ def func3():
     cv2.waitKey()
     cv2.destroyAllWindows()
 
+def func4():
+    img1 = cv2.imread('lenna.bmp', cv2.IMREAD_GRAYSCALE)
+    img2 = img1[200:400, 200:400]
+    img3 = img1[200:400, 200:400].copy()
+
+    img2 += 20
+
+    cv2.imshow('img1', img1)
+    cv2.imshow('img2', img2)
+    cv2.imshow('img3', img3)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+
+
+def func5():
+    mat1 = np.array(np.arange(12)).reshape(3, 4)
+
+    print('mat1:')
+    print(mat1)
+
+    h, w = mat1.shape[:2]
+
+    mat2 = np.zeros(mat1.shape, type(mat1))
+
+    for j in range(h):
+        for i in range(w):
+            mat2[j, i] = mat1[j, i] + 10
+
+    print('mat2:')
+    print(mat2)
+
+
+def func6():
+    mat1 = np.ones((3, 4), np.int32)    # 1's matrix
+    mat2 = np.arange(12).reshape(3, 4)
+    mat3 = mat1 + mat2
+    mat4 = mat2 * 2
+
+    print("mat1:", mat1, sep='\n')
+    print("mat2:", mat2, sep='\n')
+    print("mat3:", mat3, sep='\n')
+    print("mat4:", mat4, sep='\n')
+
+
 
 if __name__ == '__main__':
     # func1()
     # func2()
-    func3()
+    # func3()
+    # func4()
+    # func5()
+    func6()
