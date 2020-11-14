@@ -48,9 +48,55 @@ def drawPolys():
     cv2.destroyAllWindows()
 
 
+def drawText1():
+    img = np.full((500, 800, 3), 255, np.uint8)
+
+    cv2.putText(img, "FONT_HERSHEY_SIMPLEX", (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255))
+    cv2.putText(img, "FONT_HERSHEY_PLAIN", (20, 100), cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255))
+    cv2.putText(img, "FONT_HERSHEY_DUPLEX", (20, 150), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 255))
+    cv2.putText(img, "FONT_HERSHEY_COMPLEX", (20, 200), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0))
+    cv2.putText(img, "FONT_HERSHEY_TRIPLEX", (20, 250), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 0, 0))
+    cv2.putText(img, "FONT_HERSHEY_COMPLEX_SMALL", (20, 300), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (255, 0, 0))
+    cv2.putText(img, "FONT_HERSHEY_SCRIPT_SIMPLEX", (20, 350), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 1, (255, 0, 255))
+    cv2.putText(img, "FONT_HERSHEY_SCRIPT_COMPLEX", (20, 400), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 1, (255, 0, 255))
+    cv2.putText(img, "FONT_HERSHEY_COMPLEX | FONT_ITALIC", (20, 450), cv2.FONT_HERSHEY_COMPLEX | cv2.FONT_ITALIC, 1, (255, 0, 0))
+
+    cv2.imshow("img", img)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+
+def drawText2():
+    # np.full((height, width, channel), color, dtype)
+    # color 위치에 (255, 255, 0) : 하늘색 / BGR
+    img = np.full((200, 640, 3), 255, np.uint8) # w : 640, h : 200 / 255 : white / 0이면 black
+    # img = np.full((200, 640, 3), (0, 255, 255), np.uint8) #  yellow
+    
+    text = "Hello, OpenCV"
+    fontFace = cv2.FONT_HERSHEY_TRIPLEX
+    fontScale = 2.0
+    thickness = 1
+
+    sizeText, _ = cv2.getTextSize(text, fontFace, fontScale, thickness)
+    # print(sizeText) # (481, 43)
+
+    org = ((img.shape[1] - sizeText[0]) // 2, (img.shape[0] + sizeText[1]) // 2) # text가 출력될 사각형 영역의 좌측 하단 좌표
+    # print(org) # (79, 121)
+    
+    cv2.putText(img, text, org, fontFace, fontScale, (255, 0, 0), thickness)
+    cv2.rectangle(img, org, (org[0] + sizeText[0], org[1] - sizeText[1]), (0, 255, 0), 1)
+    # cv2.rectangle(img, start, end, color, thickness)
+    # img : 그림을 그릴 이미지
+    # start : 시작 좌표(ex. (0, 0)) -> 좌측 하단
+    # end : 종료 좌표(ex. (500, 500))
+    # color : BGR 형태의 Color
+    # thickness(int) : 선의 두께, pixel
+
+    cv2.imshow("img", img)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
 
 if __name__ == '__main__':
     # drawLines()
-    drawPolys()
+    # drawPolys()
     # drawText1()
-    # drawText2()
+    drawText2()
