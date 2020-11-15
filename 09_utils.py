@@ -136,9 +136,9 @@ def useful_func():
 
 
 if __name__ == '__main__':
-    # mask_setTo()
-    # mask_copyTo()
-    # time_inverse()
+    mask_setTo()
+    mask_copyTo()
+    time_inverse()
     useful_func()
 
 # a = np.array([[1, 1], [2, 2]])
